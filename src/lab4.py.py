@@ -1,11 +1,11 @@
 class Camera:
-    def __init__(self, manufacturer = '', memorySize = 0, focus_number = 1.0):
+    def __init__(self, manufacturer='', memorySize=0, focus_number=1.0):
         self.__manufacturer = manufacturer
         self.__memorySize = memorySize
         self.__focus_number = focus_number
 
         self.photos_number = 10
-        self.photo_efect = "Night"
+        self.photo_effect = "Night"
 
     def get_manufacturer(self):
         return self.__manufacturer
@@ -16,34 +16,29 @@ class Camera:
     def get_focus_number(self):
         return self.__focus_number
     
-
     def __str__(self):
         return (f" '{self.__manufacturer}':  "
                 f"memorySize = {self.__memorySize} MB, "
                 f"focus_number = {self.__focus_number}x, "
                 f"photos_number: {self.photos_number}, "
-                f"photo_efect - {self.photo_efect}. ")
+                f"photo_effect: {self.photo_effect}. ")
         
     def __repr__(self):
         return self.__str__()
     
-
     def __del__(self):
         print("\n", f"Camera '{self.__manufacturer}' is deconstructed.")
 
 
 
-
-
 class Farm:
-    def __init__(self, location = "", animal_number = 0, fan_power = 0):
+    def __init__(self, location="", animal_number=0, fan_power=0):
         self.__location = location
         self.__animal_number = animal_number
         self.__fan_power = fan_power
 
         self.owner = "Stiven"
         self.ownerAge = 45
-
 
     def get_location(self):
         return self.__location
@@ -54,7 +49,6 @@ class Farm:
     def get_fan_power(self):
         return self.__fan_power
     
-
     def __str__(self):
         return (f"Farm (location = {self.__location}, "
                 f"animal_number = {self.__animal_number}, "
@@ -65,10 +59,8 @@ class Farm:
     def __repr__(self):
         return self.__str__()
     
-
     def __del__(self):
         print("\n", f"Farm in {self.__location} is deconstructed.")
-
 
 
 def main():
@@ -83,7 +75,6 @@ def main():
     print("\n" .join(info_camera))
     print("\n\n")
     
-    
     farms = [
         Farm("North", 10, 180),
         Farm("South", 25, 1200),
@@ -91,9 +82,7 @@ def main():
     ]
 
     info_farms = [str(farm) for farm in farms]
-
     print("\n" .join(info_farms))
-
 
 main()
 
